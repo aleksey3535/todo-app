@@ -38,3 +38,16 @@ func (u *UpdateListInput) Validate() error {
 	}
 	return nil
 }
+
+type UpdateItemInput struct {
+	Title *string `json:"title"`
+	Description *string `json:"description"`
+	Done *bool `json:"done"`
+}
+
+func (u *UpdateItemInput) Validate() error {
+	if u.Title == nil && u.Description == nil && u.Done == nil {
+		return errors.New("update structures has no values")
+	}
+	return nil
+}
