@@ -40,9 +40,9 @@ func (u *UpdateListInput) Validate() error {
 }
 
 type UpdateItemInput struct {
-	Title *string `json:"title"`
+	Title       *string `json:"title"`
 	Description *string `json:"description"`
-	Done *bool `json:"done"`
+	Done        *bool   `json:"done"`
 }
 
 func (u *UpdateItemInput) Validate() error {
